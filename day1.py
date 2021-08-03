@@ -1,10 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return '<h1>Hello Er Body<h1>'
+    title = 'Top 5 Disney Rides'
+    return render_template('index.html', title=title)
+
 @app.route("/fave")
 def favorite5():
-    return '<h1>Bye Bye<h1>'
+    rides = ["Rise of the Resistance", " Tower of Terror", " Space Mountain", "Rock N Roller Coaster", "Avatar: Flight of Passage"]
+    return render_template('fave.html', rides=rides)

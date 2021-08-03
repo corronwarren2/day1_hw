@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> My top 5 rides are:</h1>
+<h3> My favorite rides are: </h3>
+<ol>
+    
+    {% for r in rides %}
+        <li>{{r}}</li>
+    
+    {% endfor %}
+</ol>
+
+{% endblock content %}
+
+      
